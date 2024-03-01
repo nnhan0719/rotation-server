@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/dark-blue-f8", (req, res) => {
-  return defaultHtml(res);
+//   return defaultHtml(res);
 
   return res.redirect(307, "https://zaksrealm.net");
 });
