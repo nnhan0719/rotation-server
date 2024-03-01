@@ -12,9 +12,14 @@ app.get("/", (req, res) => {
 });
 
 app.get("/dark-blue-f8", (req, res) => {
-//   return defaultHtml(res);
-
+  //   return defaultHtml(res);
   return res.redirect(307, "https://zaksrealm.net");
+});
+
+app.get("/.well-known/pki-validation/", (req, res) => {
+  return res.sendFile(
+    path.join(__dirname, "82E63114AA4D5625F934CE7D03311899.txt")
+  );
 });
 
 app.listen(port, () => {
